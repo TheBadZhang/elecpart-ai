@@ -308,7 +308,7 @@
 | PY32F030K28U6 | Cortex-M0+ | QFN-32 | 4×4 | 48MHz | 32KB/4KB | 1.7V~5.5V | 更多IO | 通用低成本控制 |
 | HC32F005C6PA | Cortex-M0+ | — | — | 32MHz | 32KB/4KB | 1.8V~5.5V | 华大半导体MCU | 国产替代、低成本控制 |
 | HC32L110C6UA | Cortex-M0+ | — | — | 32MHz | 32KB/4KB | 1.8V~5.5V | 低功耗版本 | 电池供电的低功耗应用 |
-| HK32F030MF4P6 | 航顺(HK) | LQFP-48 | 7×7 | 48MHz | 64KB/8KB | 2V~3.6V | 2×UART, 1×SPI, 1×I²C, 12bit ADC(10ch), 2×Timer, DMA, 引脚兼容STM32F030 | 工业控制、IoT、家电控制、国产替代STM32F030 |
+| HK32F030MF4P6 | 航顺(HK) | TSSOP-20 | 6.5×4.4 | 32MHz | 16KB/2KB+448B EEPROM | 1.8V~3.6V | Cortex-M0, 1×USART(6Mbps), 1×SPI/I2S, 1×I²C(1MHz), 12bit ADC(5ch,有效8bit), 1×Adv Timer(4ch PWM+3ch互补), 1×Gen Timer, 1×Basic Timer, 16 GPIO, IOMUX | 低成本控制、8位MCU替代、IoT传感器、玩具、家电 |
 
 ### 9.5 HC32 (华大半导体) ARM Cortex-M4 系列
 
