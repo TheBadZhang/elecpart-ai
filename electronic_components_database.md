@@ -308,7 +308,7 @@
 | PY32F030K28U6 | Cortex-M0+ | QFN-32 | 4×4 | 48MHz | 32KB/4KB | 1.7V~5.5V | 更多IO | 通用低成本控制 |
 | HC32F005C6PA | Cortex-M0+ | — | — | 32MHz | 32KB/4KB | 1.8V~5.5V | 华大半导体MCU | 国产替代、低成本控制 |
 | HC32L110C6UA | Cortex-M0+ | — | — | 32MHz | 32KB/4KB | 1.8V~5.5V | 低功耗版本 | 电池供电的低功耗应用 |
-| HK32F030MF4P6 | 航顺(HK) | TSSOP-20 | 6.5×4.4 | 32MHz | 16KB/2KB+448B EEPROM | 1.8V~3.6V | Cortex-M0, 1×USART(6Mbps), 1×SPI/I2S, 1×I²C(1MHz), 12bit ADC(5ch,有效8bit), 1×Adv Timer(4ch PWM+3ch互补), 1×Gen Timer, 1×Basic Timer, 16 GPIO, IOMUX | 低成本控制、8位MCU替代、IoT传感器、玩具、家电 |
+| HK32F030MF4P6 | 航顺(HK) | LQFP-48 | 7×7 | 48MHz | 64KB/8KB | 2V~3.6V | 2×UART, 1×SPI, 1×I²C, 12bit ADC(5ch), 2×Timer, DMA, 引脚兼容STM32F030 | 工业控制、IoT、家电控制、国产替代STM32F030 |
 
 ### 9.5 HC32 (华大半导体) ARM Cortex-M4 系列
 
@@ -412,6 +412,7 @@
 | PAM8610 | Diodes Inc | SOP-16/QFN-16 | 10.2×6.4 / 4×4 | 6V~14V | 2×3W@12V/8Ω, Class D立体声功放, 效率88%, 过载/热保护 | 车载音频、家庭影院、便携音箱 |
 | MAX98357AETE+ | Analog Devices(ADI) | TQFN-16 | 3×3×0.75 | 2.5V~5.5V | 数字PCM输入Class D功放, 3.2W@4Ω/5V, 效率92%, I2S/Left-Justified/TDM, 无需MCLK, 无滤波 | 智能音箱、笔记本、IoT设备、便携音响 |
 | PAM8403 | Diodes Inc | SOP-16/QFN-16 | 10.2×6.4 / 4×4 | 4.5V~5.5V | 2×2W@5V/8Ω, Class D立体声功放, 效率85%, 20Hz~20kHz | 蓝牙音箱、便携音频、USB音箱 |
+| NS4168 | Nsiway(纳芯威) | ESOP-8 | — | 3V~5.5V | 2.5W@4Ω, I2S数字输入单声道Class D功放, 效率80%@2.5W, THD+N 0.2%@1W, 8k~96kHz采样率, NCN防失真, 过流/过温/欠压保护 | 蓝牙音箱、智能音箱、MP3/PMP、数码相框 |
 | AW3410S | Awinic(上海艾为) | SOP-8/QFN-20 | 5.3×6.2 / 4×4 | 2.7V~5.5V | Class D音频功放, THD+N<1%, SNR>85dB, 效率85~90%, 内置保护电路 | 便携音箱、蓝牙音箱、智能手机/平板音频 |
 | LM386 | TI(德州仪器) | DIP-8/SOIC-8 | 9.3×6.4 / 5.3×6.0 | 4V~18V | 700mW@9V/4Ω, Class-AB音频功放, 增益20~200倍可调, THD+N<0.2%, 静态8mA | 便携音频放大、小型扬声器、报警器 |
 
