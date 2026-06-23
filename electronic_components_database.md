@@ -328,8 +328,10 @@
 | 型号 | 内核 | 封装 | 封装尺寸 (mm) | 关键参数 | 适用场景 |
 |---|---|---|---|---|---|
 | ESP32-C3FH4 | Xtensa 32位单核 RISC-V | QFN-32 | 5×5 | 160MHz, 4MB片上Flash, 400KB SRAM, 22 GPIO, 2.4GHz Wi-Fi 802.11b/g/n + Bluetooth 5(LE), -40~105°C | IoT、智能家居、Wi-Fi/BLE连接 |
+| ESP32-C6 | 32位RISC-V + 低功耗核 | QFN-32 | 5×5 | 160MHz, 4/8MB片上Flash, 320KB SRAM, 22 GPIO, 2.4GHz Wi-Fi 6 + BLE 5.4, Zigbee/Thread, -40~85°C | 低功耗IoT、蓝牙音频、Zigbee网关、智能家居 |
 | ESP32-S3FN8 | Xtensa 32位 LX7 双核 | QFN-56 | 7×7 | 240MHz, 8MB片上Flash, 45 GPIO, 2.4GHz Wi-Fi 802.11b/g/n + BT5(LE), AI指令集, LCD/Camera接口 | 智能人机交互、AIoT、HMI应用 |
 | ESP32-S31 | RISC-V 双核 | QFN | 8×8 | 高性能RISC-V双核, Wi-Fi 6 + BT5.4(LE), 1Gbps Ethernet, 512KB SRAM, 16/32MB Flash/PSRAM | 高性能AIoT、多协议连接、边缘计算 |
+| ESP32-P4 | 双核LX8 1GHz HP + RISC-V LP | QFN-56 | 6×6 | HP 1GHz/LP 8MHz, 768KB SRAM, 32 GPIO, 2.4GHz Wi-Fi 6 + BLE 5.4, 1G Ethernet MAC, 2×USB OTG, I³C, DSC, 内置PSRAM控制器 | 高性能IoT网关、边缘AI、视频处理、智能家居枢纽 |
 
 ### 9.10 SF32LB52x (思澈科技) ARM Cortex-M33 系列
 
@@ -344,11 +346,15 @@
 | 型号 | 内核 | 封装 | 封装尺寸 (mm) | 关键参数 | 适用场景 |
 |---|---|---|---|---|---|
 | RP2040 | 双核Cortex-M0+ | QFN-56 | 7×7 | 133MHz, 264KB SRAM, 2×UART, 2×SPI, 2×I²C, 16×PWM, USB1.1 Host/Device, 8×PIO状态机, -40~85°C | DIY项目、教育、IoT、HID设备、PIO自定义外设 |
+| RP2350A | 双核Cortex-M33 / 双核Hazard3 RISC-V(可选切换) | QFN-60 | 7×7 | 150MHz, 520KB SRAM, 30 GPIO, TrustZone安全, 12×PIO, 4×ADC, SHA-256加速, USB1.1 | 紧凑型安全嵌入式、工业控制、可穿戴设备 |
 | RP2350B | 双核Cortex-M33 / 双核Hazard3 RISC-V(可选切换) | QFN-80 | 10×10 | 150MHz, 520KB SRAM, 48 GPIO, TrustZone安全, 12×PIO, 4/8×ADC, SHA-256加速, USB1.1 | 高性能嵌入式、安全IoT、边缘计算、Pico 2 |
 
 | 型号 | 内核 | 封装 | 封装尺寸 (mm) | 主频 | Flash/SRAM | 供电电压 | 关键参数 | 适用场景 |
 |---|---|---|---|---|---|---|---|---|
+| STM32N647IO | Cortex-M55 FPU + Neural-ART NPU | UFBGA-176 | 10×10 | 800MHz | —/4.2MB | 1.71V~3.6V | Neural-ART NPU 600GOPS@1GHz, NeoChrom GPU, H.264编码, ISP, 2×USB HS OTG, 1G Ethernet TSN, 6×SPI, 4×I²C, 2×I³C, 10×UART, 3×FDCAN, LCD-TFT, CSI-2, TrustZone, SESIP3, -40~125°C | AI边缘计算、计算机视觉、HMI、智能家居、工业控制 |
+| STM32H7R7L8 | Cortex-M7 FPU + NeoChrom GPU | LQFP-144 | 20×20 | 600MHz | 64KB/620KB | 1.71V~3.6V | NeoChrom GPU, JPEG编解码, LCD-TFT, 2×USB HS OTG+PHY, 以太网MAC, 6×SPI, 3×I²C, 1×I³C, 7×UART, 2×FDCAN, 2×12bit ADC(5MSps), CORDIC, Chrom-ART, FMC, OSPI, -40~125°C | HMI显示、图形加速、工业控制、边缘网关 |
 | STM32H723VGT6 | Cortex-M7 | LQFP-100 | 14×14 | 550MHz | 1MB/564KB | 1.62V~3.6V | 最高性能, 双精度FPU, Chrom-ART | 高性能HMI、电机控制、边缘AI |
+| STM32H723ZGT6 | Cortex-M7 FPU | LQFP-144 | 20×20 | 550MHz | 1MB/564KB | 1.62V~3.6V | 同H723VGT6, LQFP-144更多IO, 2×USB OTG HS+FS, 以太网MAC, 4×USART, 4×SPI, 4×I²C, 3×ADC, FMC, QSPI, Chrom-ART, JPEG编解码, -40~125°C | 电机控制、工业HMI、网络网关、数据采集 |
 | STM32H743XIH6 | Cortex-M7 | UFBGA-176 | 10×10 | 480MHz | 2MB/1MB | 1.62V~3.6V | 超大BGA封装, 最多168 IO | 超复杂SoC级应用 |
 | STM32H750VBT6 | Cortex-M7 | LQFP-100 | 14×14 | 480MHz | 128KB/1MB | 1.62V~3.6V | 高性能, 内置ART加速器 | 高性能实时控制 |
 | STM32H7B0VBT6 | Cortex-M7 | LQFP-100 | 14×14 | 280MHz | 128KB/1MB | 1.62V~3.6V | 双精度FPU, 高算力 | 高性能嵌入式计算 |
@@ -375,6 +381,9 @@
 | RV1106G2 | ARM Cortex-A7 + MCU | QFN-128 | — | 高性能AIoT SoC, 内置NPU, 支持摄像头接口 | 智能摄像头、AIoT网关、边缘计算 |
 | RV1106G3 | ARM Cortex-A7 + MCU | QFN-128 | — | 类似G2, 性能/内存配置差异 | 智能摄像头、AIoT |
 | RV1103G1 | ARM Cortex-A7 | QFN-88 | — | 入门级AIoT SoC, 内置NPU | 入门级智能摄像头、AIoT |
+| RV1103 | ARM Cortex-A7 | QFN-88 | — | 入门级AIoT SoC, 内置NPU, RV1103G1基型 | 入门级智能摄像头、AIoT |
+| RK3506G2 | ARM Cortex-A7 + MCU + NPU | QFN-128 | — | 入门级AIoT SoC, 内置NPU, 支持ISP/摄像头, H.264/H.265编解码 | 入门级智能摄像头、AIoT网关、智能门铃 |
+| RK3506B | ARM Cortex-A7 + MCU + NPU | QFN-128 | — | 入门级AIoT SoC变体, 内置NPU, 支持ISP/摄像头 | 入门级AIoT、智能摄像头 |
 
 ---
 
