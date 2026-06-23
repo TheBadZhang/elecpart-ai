@@ -49,6 +49,7 @@
 | 型号 | 厂商 | 封装 | 封装尺寸 (mm) | 供电电压 | 关键参数 | 适用场景 |
 |---|---|---|---|---|---|---|
 | QMC6308 | QST(矽睿) | WLCSP | 0.8×0.8×0.5 | 1.65V~1.95V | 三轴AMR磁力计, ±30G, 16bit ADC, I²C, 输出速率最高1.5kHz, 功耗15μA | 智能手机、智能手表、电子罗盘、步行导航 |
+| QMC58CCL | QST(矽睿) | QFN-10 | 2×2×0.9 | 1.8V~3.6V | 三轴AMR磁力计, ±30G, 16bit ADC, I²C, 内置温度补偿, 自检诊断 | 电子罗盘、导航系统、无人机方向指示 |
 
 ### 2.3 温湿度传感器
 
@@ -67,12 +68,19 @@
 | 型号 | 厂商 | 封装 | 封装尺寸 (mm) | 关键参数 | 适用场景 |
 |---|---|---|---|---|---|
 | ACT45B-510-2P-TL003 | TDK | 贴片 | 4.5×3.2×2.8 | 共模电感51μH@100kHz, 10MHz阻抗2.8kΩ, 200mA, 50V, AEC-Q200车规 | CAN/LIN总线EMI抑制、车载ECU、工业通信 |
+| ECMF02-2AMX6 | STMicro | QFN-6 | 1.45×1.0 | USB2.0/HDMI EMI共模滤波器, 双通道, 集成ESD保护, 6kV HBM | USB2.0接口EMI抑制、高速信号线滤波 |
 
 ### 2.6 数字温度传感器
 
 | 型号 | 厂商 | 封装 | 封装尺寸 (mm) | 供电电压 | 关键参数 | 适用场景 |
 |---|---|---|---|---|---|---|
 | TMP117AIDRVR | TI | WSON-6 (DRV) | 2×2 | 1.8V~5.5V | 精度±0.1°C(30~42°C)/±0.2°C(-55~150°C), I²C/SMBus, 16bit, 5μA, NIST校准, 48bit EEPROM, 4地址 | 医疗设备、替代PT100/PT1000 RTD、环境监测 |
+
+### 2.7 气压传感器
+
+| 型号 | 厂商 | 封装 | 封装尺寸 (mm) | 供电电压 | 关键参数 | 适用场景 |
+|---|---|---|---|---|---|---|
+| BMP280 | Bosch Sensortec | LGA-8 | 3×3×0.93 | 1.71V~3.6V | 气压300~1100hPa, ±1hPa精度, 20bit压力/16bit温度, I²C/SPI, 2.5μA | 气象站、无人机高度计、可穿戴设备 |
 
 ---
 
@@ -85,6 +93,8 @@
 | CH338F | WCH(沁恒) | QFN-32 | 4×4 | 3.3V | 7端口USB2.0 HUB, 支持MTT/STT, 480Mbps, 部分型号支持PD 100W快充 | 工控机主板、多USB扩展、带PD快充的设备 |
 | CH334P | WCH(沁恒) | QFN-16 | 3×3 | 3.3V | 4端口USB2.0 HUB, 支持MTT/STT, 480Mbps, 静态电流0.4mA | 嵌入式系统、打印机、小型USB扩展坞 |
 | CH335F | WCH(沁恒) | QFN-28 | 4×4 | 3.3V/5V | 4端口USB2.0 HUB, 支持MTT(4×TT并发)/STT, 480Mbps, 工作电流85mA, 静态0.12mA, 支持I²C配置EEPROM, 支持BC1.2/CDP充电协议, 6kV ESD, 1个下行端口支持USB3.0 SuperSpeed直通 | 工控机主板、多USB扩展坞、需MTT高性能带宽场景 |
+| VL822Q7 | VIA Labs | BGA | — | 3.3V/5V | USB3.1 Gen1 + USB2.0 HUB, 多下游端口, 嵌入式MCU, 集成PHY, 支持BC1.2充电 | 高性能USB扩展坞、笔记本扩展、多端口USB HUB |
+| VL160 | VIA Labs | BGA | — | 3.3V/5V | USB2.0 HUB控制器, 480Mbps, 支持MTT, 集成PHY, 低功耗 | USB2.0多端口扩展、工业USB HUB、嵌入式USB扩展 |
 
 ### 3.2 USB转串口
 
@@ -132,49 +142,48 @@
 
 | 型号 | 厂商 | 封装 | 封装尺寸 (mm) | 输入电压 | 关键参数 | 适用场景 |
 |---|---|---|---|---|---|---|
-| SY8088AAC | Silergy(矽力杰) | SOT-23-5 | 2.9×1.6×1.1 | 2.5V~5.5V | 1A输出, 1.5MHz, 同步降压, 静态电流40μA, 内部软启动, 100%压差操作 | 便携导航、机顶盒、USB加密狗、智能手机 |
 | TPS62065DSGR | TI | WSON-8 | 2×2×0.75 | 2.9V~6V | 2A输出, 3MHz, 效率高达97%, 省电模式, 电源正常输出, 支持1mm电感 | 5V/3.3V系统电源轨、高密度PCB设计 |
-| RT8010GQW | Richtek(立锜) | WDFN-6 | 2×2 | 2.5V~5.5V | 1A输出, 1.5MHz PWM, 效率95%, 无需外部肖特基二极管 | 便携设备、空间受限的降压应用 |
-| TPS82130SILR | TI | MicroSiP-8 | 3×2.8×1.5 | 3V~17V | 3A输出, DCS-Control, 静态电流20μA, 0.9V~6V可调输出, 内置电感 | 工业、电信、SSD、空间极受限的电源模块 |
+| TLV62568DBVR | TI | SOT-23-5 (DBV) | 2.9×1.6 | 2.5V~5.5V | 1A同步降压, 1.5MHz, 效率90%+, 35μA IQ, 100%占空比, 内部补偿 | 空间受限的1A降压、RF/传感器供电 |
 | TLV62569DBVR | TI | SOT-23-5 | 2.9×1.6 | 2.5V~5.5V | 2A输出, 1.5MHz, 效率95%, 省电模式, 静态电流35μA, 100%占空比 | 空间受限的高效降压、RF/传感器供电 |
-| TPS63060DSCR | TI | WSON-10 | 3×3 | 2.5V~12V | 升降压, 2A持续/4A峰值, 固定3.4MHz, 效率>90% | 单节锂电升降压供电、电池电压波动大的场景 |
-| TPS63020DSJR | TI | VSON-14 (DSJ) | 3×3 | 1.8V~5.5V | 升降压, 2A持续/4A峰值, 2.4MHz, I²C可编程输出, 效率96% | 需要I²C动态调压的电池供电设备 |
-| TPS61200DRCR | TI | VSON-10 | 3×3 | 0.3V~5.5V | 升压, 1.5A, 0.5V~5.5V输入, 1.8V~5.5V输出 | 单节/双节镍氢、单节锂电升压、太阳能充电 |
-| TPS61230ARNST | TI | VQFN-HR-7 (RNS) | 2×2×0.9 | 2.5V~4.5V | 升压, 6A谷值限流, 21mΩ(LS)/18mΩ(HS), 1.15MHz, 效率96%, 输出短路保护, 真正负载断开 | 单节锂电升压到5V、大电流便携设备 |
-| TPS61022RWUR | TI | VQFN-HR-7 (RWU) | 2×2 | 0.5V~5.5V | 升压, 8A谷值限流, 12mΩ(LS)/18mΩ(HS), 1MHz, VIN>1.5V, 效率94.7%@3.6V→5V/3A, 超宽输入电压 | 超级电容备用电源、多节碱性电池升压、IoT |
-| TPS63802DLAR | TI | VSON-HR-10 (DLA) | 3×2 | 1.3V~5.5V | 升降压, 2A输出@VI≥2.3V, 11μA IQ, 1.8V~5.2V可调输出, PFM/PWM可选, 真正负载断开 | 电池电压波动大的宽范围供电、单节锂电升降压 |
-| TLV61046ADBVR | TI | SOT-23-6 (DBV) | 2.9×1.6 | 1.8V~5.5V | 升压, 输出最高28V, 980mA开关电流, 集成功率二极管和隔离开关, 效率85%@3.6V→12V, 7ms软启动 | PMOLED面板供电、LCD偏置、传感器模块 |
-| SYR838PKC | Silergy(矽力杰) | CSP-20 | 1.6×2 | 2.6V~5.5V | 降压, 6A输出, 2.4MHz, 28mΩ/17mΩ内置开关, I²C可编程0.7125V~1.5V, 65μA IQ, 短路打嗝保护 | 智能手机、网络平板、大电流降压 |
-| TPS62840DLCR | TI | VSON-HR-8 (DLC) | 1.1×2 | 1.8V~6.5V | 降压, 750mA, 60nA IQ, DCS-Control, 16种VSET可选输出电压, PFM/PWM可选, STOP模式, 25nA关断电流 | 超低功耗IoT、射频友好型电源、电能表 |
-| ECMF02-2AMX6 | STMicro | QFN-6 | 1.45×1.0 | EMI共模滤波器 | USB2.0/HDMI EMI共模滤波器, 双通道, 集成ESD保护, 6kV HBM | USB2.0接口EMI抑制、高速信号线滤波 |
 | TPS56637RPAR | TI | QFN-10 | 3×3 | 4.5V~17V | 6A同步降压, 固定频率, 高电流密度 | 高电流密度的12V/5V降压、工业电源 |
 | TPS54302DDCR | TI | SOT-23-6 | 2.9×1.6 | 4.5V~28V | 3A同步降压, 580kHz, 内置补偿 | 12V/24V工业总线降压、高电压输入降压 |
 | TPS563201DDCR | TI | SOT-23-6 | 2.9×1.6 | 4.5V~17V | 3A同步降压, 固定频率, 高效 | 12V转5V/3.3V、机顶盒、DTV |
-| SY8089AAAC | Silergy | SOT-23-5 | 2.9×1.6 | 2.5V~5.5V | 1.5MHz同步降压, 内置开关, 高轻载效率 | 便携设备、空间受限应用 |
-| TPS43060RTER | TI | WQFN-16 (RTE) | 3×3 | 4.5V~38V | 同步升压控制器(需外部MOSFET), 输出最高58V, 50kHz~1MHz可调, 7.5V栅极驱动, IQ 600μA | 汽车电源、Thunderbolt端口、5V/12V/24V升压 |
+| TPS62840DLCR | TI | VSON-HR-8 (DLC) | 1.1×2 | 1.8V~6.5V | 降压, 750mA, 60nA IQ, DCS-Control, 16种VSET可选输出电压, PFM/PWM可选, STOP模式, 25nA关断电流 | 超低功耗IoT、射频友好型电源、电能表 |
+| TPS63020DSJR | TI | VSON-14 (DSJ) | 3×3 | 1.8V~5.5V | 升降压, 2A持续/4A峰值, 2.4MHz, I²C可编程输出, 效率96% | 需要I²C动态调压的电池供电设备 |
+| TPS63060DSCR | TI | WSON-10 | 3×3 | 2.5V~12V | 升降压, 2A持续/4A峰值, 固定3.4MHz, 效率>90% | 单节锂电升降压供电、电池电压波动大的场景 |
+| TPS63802DLAR | TI | VSON-HR-10 (DLA) | 3×2 | 1.3V~5.5V | 升降压, 2A输出@VI≥2.3V, 11μA IQ, 1.8V~5.2V可调输出, PFM/PWM可选, 真正负载断开 | 电池电压波动大的宽范围供电、单节锂电升降压 |
+| TPS61200DRCR | TI | VSON-10 | 3×3 | 0.3V~5.5V | 升压, 1.5A, 0.5V~5.5V输入, 1.8V~5.5V输出 | 单节/双节镍氢、单节锂电升压、太阳能充电 |
+| TPS61230ARNST | TI | VQFN-HR-7 (RNS) | 2×2×0.9 | 2.5V~4.5V | 升压, 6A谷值限流, 21mΩ(LS)/18mΩ(HS), 1.15MHz, 效率96%, 输出短路保护, 真正负载断开 | 单节锂电升压到5V、大电流便携设备 |
+| TPS61022RWUR | TI | VQFN-HR-7 (RWU) | 2×2 | 0.5V~5.5V | 升压, 8A谷值限流, 12mΩ(LS)/18mΩ(HS), 1MHz, VIN>1.5V, 效率94.7%@3.6V→5V/3A, 超宽输入电压 | 超级电容备用电源、多节碱性电池升压、IoT |
 | TPS61088RHLR | TI | VQFN-20 (RHL) | 3.5×3.5 | 2.7V~12V | 10A全集成同步升压, 11.9A开关限流, 4.5V~12.6V输出, 200kHz~2MHz, IQ 110μA, 效率90%+ | 单节锂电升压到5V/9V/12V、大功率便携设备 |
-| TLV62568DBVR | TI | SOT-23-5 (DBV) | 2.9×1.6 | 2.5V~5.5V | 1A同步降压, 1.5MHz, 效率90%+, 35μA IQ, 100%占空比, 内部补偿 | 空间受限的1A降压、RF/传感器供电 |
+| TLV61046ADBVR | TI | SOT-23-6 (DBV) | 2.9×1.6 | 1.8V~5.5V | 升压, 输出最高28V, 980mA开关电流, 集成功率二极管和隔离开关, 效率85%@3.6V→12V, 7ms软启动 | PMOLED面板供电、LCD偏置、传感器模块 |
+| TPS43060RTER | TI | WQFN-16 (RTE) | 3×3 | 4.5V~38V | 同步升压控制器(需外部MOSFET), 输出最高58V, 50kHz~1MHz可调, 7.5V栅极驱动, IQ 600μA | 汽车电源、Thunderbolt端口、5V/12V/24V升压 |
+| SY8088AAC | Silergy(矽力杰) | SOT-23-5 | 2.9×1.6×1.1 | 2.5V~5.5V | 1A输出, 1.5MHz, 同步降压, 静态电流40μA, 内部软启动, 100%压差操作 | 便携导航、机顶盒、USB加密狗、智能手机 |
+| SY8089AAAC | Silergy | SOT-23-5 | 2.9×1.6 | 2.5V~5.5V | 1.5MHz同步降压, 内置开关, 高轻载效率 | 便携设备、空间受限应用 |
+| SYR838PKC | Silergy(矽力杰) | CSP-20 | 1.6×2 | 2.6V~5.5V | 降压, 6A输出, 2.4MHz, 28mΩ/17mΩ内置开关, I²C可编程0.7125V~1.5V, 65μA IQ, 短路打嗝保护 | 智能手机、网络平板、大电流降压 |
+| RT8010GQW | Richtek(立锜) | WDFN-6 | 2×2 | 2.5V~5.5V | 1A输出, 1.5MHz PWM, 效率95%, 无需外部肖特基二极管 | 便携设备、空间受限的降压应用 |
+| NB678GD | NanJing(南京微芯) | SOP-8 | 5.3×6.2 | 4.5V~24V | 同步降压DC-DC, 可调输出, 300kHz~1MHz, 效率85~92%, 过流/过热保护, 软启动 | 工业电源、3.3V/5V稳压、电池充电电路 |
 
 ### 4.3 LDO线性稳压器
 
 | 型号 | 厂商 | 封装 | 封装尺寸 (mm) | 输入电压 | 关键参数 | 适用场景 |
 |---|---|---|---|---|---|---|
-| RT9013 | Richtek(立锜) | SOT-23 | 2.9×1.6 | 2.2V~5.5V | 500mA LDO, 压差250mV@500mA, PSRR -50dB, 噪声30μVRMS, 关断电流0.7μA | RF电路、无线模块、低噪声模拟供电 |
 | TLV76701DRVR | TI | WSON-6 | 2×2 | 2.5V~16V | 1A LDO, 0.8V~14.6V可调, 精度1%, IQ 50μA, PSRR 70dB@1kHz | 需要高精度、宽输入范围的LDO应用 |
+| TLV76733DRVR | TI | WSON-6 | 2×2 | 2.5V~16V | 3.3V固定输出, 1A LDO, 精度1%, PSRR 70dB | 通用3.3V/5V高精度稳压 |
 | LP5912 | TI | DSBGA/DSON | 0.8×0.8/1.2×1.2 | 1.6V~5.5V | 500mA LDO, 超低噪声, 高PSRR, 快速瞬态响应 | RF/PLL/VCO供电、高精度传感器 |
 | LP5907MFX | TI | SOT-23-5 | 2.9×1.6 | 1.8V~5.5V | 250mA LDO, 超低噪声6.5μVRMS, PSRR 90dB@1kHz, 压差120mV@250mA | RF/模拟前端、音频编解码器供电 |
-| ME6211C33M6G | Microne(南京微盟) | SOT-23-6 | 2.9×1.6 | 2V~6V | 3.3V固定输出LDO, 600mA, 低压差 | 通用3.3V稳压、MCU IO供电 |
-| ME6217C33M5G | Microne | SOT-23-5 | 2.9×1.6 | 2V~6V | 3.3V固定输出LDO, 400mA, 低压差, 高纹波抑制 | 通用3.3V稳压、电池供电设备 |
-| REF3044AIDBZR | TI | SOT-23-3 | 2.9×1.6 | — | 4.096V精密电压基准, 50ppm/°C, 50μA静态电流 | ADC/DAC基准、精密测量、传感器激励 |
-| REF3025AIDBZR | TI | SOT-23-3 (DBZ) | 2.9×1.6 | — | 2.5V精密电压基准, 50ppm/°C, 50μA静态电流 | ADC/DAC基准、精密测量、传感器激励 |
-| TLV76733DRVR | TI | WSON-6 | 2×2 | 2.5V~16V | 3.3V固定输出, 1A LDO, 精度1%, PSRR 70dB | 通用3.3V/5V高精度稳压 |
 | TPS7A2030PDBVR | TI | SOT-23-5 | 2.9×1.6 | 1.6V~5.5V | 3.0V LDO, 200mA, 超低噪声, 低压差 | 噪声敏感的模拟/RF电路 |
-| TPS7A0333DBVR | TI | SOT-23-5 | 2.9×1.6 | 0.7V~5.5V | 3.3V LDO, 200mA, 超低功耗, IQ 25μA | 电池供电、低功耗IoT |
-| TPS7A0233PDBVR | TI | SOT-23-5 | 2.9×1.6 | 1.5V~5.5V | 3.3V LDO, 200mA, 超低IQ 25μA, 高PSRR | 低功耗便携设备 |
 | TPS7A2033PDQNR | TI | X2SON-4 | 1×1 | 1.6V~5.5V | 3.3V LDO, 200mA, 超小封装 | 空间极度受限的便携设备 |
+| TPS7A0233PDBVR | TI | SOT-23-5 | 2.9×1.6 | 1.5V~5.5V | 3.3V LDO, 200mA, 超低IQ 25μA, 高PSRR | 低功耗便携设备 |
+| TPS7A0333DBVR | TI | SOT-23-5 | 2.9×1.6 | 0.7V~5.5V | 3.3V LDO, 200mA, 超低功耗, IQ 25μA | 电池供电、低功耗IoT |
 | TPS7A9201DSKR | TI | WSON-10 | 3×3 | 1.4V~7V | 2A LDO, 超低噪声, 可调节, 高PSRR | 高性能模拟/RF、FPGA辅助供电 |
 | TPS7A3901DSCR | TI | WSON-10 | 3×3 | ±1.5V~±6.5V | 双路±LDO, 低噪声, 可独立调节 | 运放/ADC双电源供电、高精度模拟前端 |
 | TPS70933DRVR | TI | WSON-6 (DRV) | 2×2 | 2.7V~30V | 3.3V LDO, 200mA, 超低IQ 1μA, 反向电流保护, 精度2%, 关断150nA | 电池供电常开系统、高电压LDO应用 |
+| ME6211C33M6G | Microne(南京微盟) | SOT-23-6 | 2.9×1.6 | 2V~6V | 3.3V固定输出LDO, 600mA, 低压差 | 通用3.3V稳压、MCU IO供电 |
+| ME6217C33M5G | Microne | SOT-23-5 | 2.9×1.6 | 2V~6V | 3.3V固定输出LDO, 400mA, 低压差, 高纹波抑制 | 通用3.3V稳压、电池供电设备 |
+| RT9013 | Richtek(立锜) | SOT-23 | 2.9×1.6 | 2.2V~5.5V | 500mA LDO, 压差250mV@500mA, PSRR -50dB, 噪声30μVRMS, 关断电流0.7μA | RF电路、无线模块、低噪声模拟供电 |
+| REF3044AIDBZR | TI | SOT-23-3 | 2.9×1.6 | — | 4.096V精密电压基准, 50ppm/°C, 50μA静态电流 | ADC/DAC基准、精密测量、传感器激励 |
+| REF3025AIDBZR | TI | SOT-23-3 (DBZ) | 2.9×1.6 | — | 2.5V精密电压基准, 50ppm/°C, 50μA静态电流 | ADC/DAC基准、精密测量、传感器激励 |
 
 ### 4.4 电源模块/其他电源
 
@@ -234,11 +243,14 @@
 
 | 型号 | 厂商 | 封装 | 封装尺寸 (mm) | 供电电压 | 关键参数 | 适用场景 |
 |---|---|---|---|---|---|---|
+| W25Q80DVUXIE | Winbond | USON-8 | 2×3 | 2.7V~3.6V | 8M-bit (1MB) SPI NOR Flash, 支持Dual/Quad SPI, 80MHz, DTR | 固件存储、Bootloader、小容量配置数据 |
 | W25Q16JVUXIQ | Winbond | USON-8 | 2×3 | 2.7V~3.6V | 16M-bit (2MB) SPI Flash, 支持Dual/Quad SPI, 133MHz, DTR | 固件存储、数据日志、FPGA配置存储 |
+| W25Q32JWBYIQ | Winbond | SOIC-8 | 5.3×8 | 2.7V~3.6V | 32M-bit (4MB) SPI NOR Flash, 支持Dual/Quad SPI, 104MHz, DTR | 固件存储、配置参数、应用代码存储 |
 | W25Q64JVSSIQ | Winbond | SOIC-8 | 4.9×3.9 | 2.7V~3.6V | 64M-bit (8MB) SPI Flash, 支持Dual/Quad SPI, 133MHz, DTR | 固件存储、大容量数据日志、显示屏资源存储 |
+| W25Q256JVEIQ | Winbond | SOIC-8 | 5.3×8 | 2.7V~3.6V | 256M-bit (32MB) SPI NOR Flash, 支持Dual/Quad SPI, 80MHz, DTR | 大容量固件存储、文件系统、FPGA配置 |
+| W9825G6KH-6I | Winbond | TSOP-54 | 14×20 | 3.3V±0.3V | 256Mb (16M×16) SDRAM, 166MHz(PC133), CL3, tAC=8ns, 100mA工作/10mA待机 | 嵌入式系统DRAM缓存、LCD显存、网络设备 |
 | M24C08 | STMicro | — | — | 1.8V~5.5V | 8Kb (1024×8) I²C EEPROM, 1MHz, 工作温度-40~105°C, 页面16字节 | 配置参数存储、设备校准数据、小容量非易失存储 |
 | M24C640FMC6TG | STMicro | UFDFPN-8 | 2×3 | 1.8V~5.5V | 640Kbit (80KB) I²C EEPROM, 1MHz, 32字节页面, 100万次擦写, 200年数据保存 | 大容量配置存储、日志记录、设备校准 |
-| W9825G6KH-6I | Winbond | TSOP-54 | 14×20 | 3.3V±0.3V | 256Mb (16M×16) SDRAM, 166MHz(PC133), CL3, tAC=8ns, 100mA工作/10mA待机 | 嵌入式系统DRAM缓存、LCD显存、网络设备 |
 
 ---
 
@@ -249,6 +261,7 @@
 | HTR3229SQER | Heroic(禾润) | QFN-32 | 4×4 | 2.5V~5.5V | 16×8 LED矩阵驱动, I²C 1MHz, 每路独立256级PWM调光, 开路/短路检测 | 白色家电LED面板、IoT设备、智能音箱 |
 | HD107S | — | LED集成封装 (5050) | 5×5×1.4 | 4.5V~5.3V | 全彩LED, 双线SPI, 26kHz PWM, 最高40MHz时钟, 内置恒流 | 全彩LED灯带、像素屏、装饰照明 |
 | SK9822 | — | LED集成封装 (5050) | 5×5×1.6 | 4.5V~5.5V | 全彩LED, 双线SPI, 256级灰度, 32级亮度, 最高30MHz | 全彩LED灯带、智能照明、显示屏 |
+| MAX7219CWG | Maxim(ADI) | SOP-24 | 8.45×6.0 | 4V~5.5V | 8位LED数码管驱动, SPI接口, 可级联, 16级PWM调光, 150mA段驱动, LED点阵8×8 | 数码管显示、LED点阵屏、工业仪表、数字时钟 |
 
 ---
 
@@ -259,6 +272,7 @@
 | 型号 | 内核 | 封装 | 封装尺寸 (mm) | 主频 | Flash/SRAM | 供电电压 | 关键参数 | 适用场景 |
 |---|---|---|---|---|---|---|---|---|
 | CH32V305FBP6 | RISC-V4C | TSSOP-20 | 6.5×4.4 | 144MHz | 128KB/32KB | 2.5V/3.3V | 以太网+USB PHY, CAN, USB2.0 HS, 17 GPIO | 路由器、交换机、网关、工业自动化 |
+| CH32V305F8U6 | RISC-V4C | QFN-20 | 3×3 | 144MHz | 64KB/20KB | 2.5V~3.3V | 以太网+USB PHY, CAN, USB2.0 HS, 15 GPIO, 小封装 | 空间受限的网络节点、IoT网关、USB外设 |
 | CH32V203F8U6 | RISC-V4C | QFN-28 | 4×4 | 144MHz | 64KB/20KB | 2.5V~5.5V | USB2.0 FS, 多种定时器, ADC | 工业控制、USB外设 |
 | CH32V003F4U6 | RISC-V4C | QFN-20 | 3×3 | 48MHz | 16KB/2KB | 2V~5.5V | 超低成本, 小封装, 基础外设 | 低成本嵌入式控制、替代8位MCU |
 | CH32H417 | RISC-V | — | — | — | — | — | 高性能RISC-V MCU | 待补充详细参数 |
@@ -333,24 +347,25 @@
 
 | 型号 | 内核 | 封装 | 封装尺寸 (mm) | 主频 | Flash/SRAM | 供电电压 | 关键参数 | 适用场景 |
 |---|---|---|---|---|---|---|---|---|
-| STM32F411CEU6 | Cortex-M4 FPU | UFQFPN-48 | 7×7×0.55 | 100MHz | 512KB/128KB | 1.7V~3.6V | ART加速器, 低功耗, Batch Acquisition Mode | 高性能低功耗便携设备 |
-| STM32F401CCU6 | Cortex-M4 FPU | UFQFPN-48 | 7×7×0.55 | 84MHz | 256KB/64KB | 1.7V~3.6V | 性价比高, 丰富外设 | 通用中性能应用 |
-| STM32H563VIT6 | Cortex-M33 | LQFP-100 | 14×14 | 250MHz | 2MB/640KB | 1.71V~3.6V | TrustZone安全, 丰富外设 | 安全敏感型工业/IoT应用 |
-| STM32U575VGT6 | Cortex-M33 | UFBGA-100 | 7×7 | 160MHz | 2MB/786KB | 1.71V~3.6V | 超低功耗, TrustZone, 640KB SRAM+扩展 | 电池供电的超低功耗IoT |
-| STM32U575RGT6 | Cortex-M33 | LQFP-64 | 10×10 | 160MHz | 2MB/786KB | 1.71V~3.6V | 超低功耗, LQFP封装易于手工焊接 | 电池供电IoT、可穿戴 |
-| STM32H563RGT6 | Cortex-M33 | LQFP-64 | 10×10 | 250MHz | 2MB/640KB | 1.71V~3.6V | 高性能, 中等IO | 工业控制、通信网关 |
-| STM32H7B0VBT6 | Cortex-M7 | LQFP-100 | 14×14 | 280MHz | 128KB/1MB | 1.62V~3.6V | 双精度FPU, 高算力 | 高性能嵌入式计算 |
-| STM32H7B0RBT6 | Cortex-M7 | LQFP-64 | 10×10 | 280MHz | 128KB/1MB | 1.62V~3.6V | 高算力, 小封装 | 高性能紧凑型设计 |
 | STM32H723VGT6 | Cortex-M7 | LQFP-100 | 14×14 | 550MHz | 1MB/564KB | 1.62V~3.6V | 最高性能, 双精度FPU, Chrom-ART | 高性能HMI、电机控制、边缘AI |
 | STM32H743XIH6 | Cortex-M7 | UFBGA-176 | 10×10 | 480MHz | 2MB/1MB | 1.62V~3.6V | 超大BGA封装, 最多168 IO | 超复杂SoC级应用 |
+| STM32H750VBT6 | Cortex-M7 | LQFP-100 | 14×14 | 480MHz | 128KB/1MB | 1.62V~3.6V | 高性能, 内置ART加速器 | 高性能实时控制 |
+| STM32H7B0VBT6 | Cortex-M7 | LQFP-100 | 14×14 | 280MHz | 128KB/1MB | 1.62V~3.6V | 双精度FPU, 高算力 | 高性能嵌入式计算 |
+| STM32H7B0RBT6 | Cortex-M7 | LQFP-64 | 10×10 | 280MHz | 128KB/1MB | 1.62V~3.6V | 高算力, 小封装 | 高性能紧凑型设计 |
+| STM32H563VIT6 | Cortex-M33 | LQFP-100 | 14×14 | 250MHz | 2MB/640KB | 1.71V~3.6V | TrustZone安全, 丰富外设 | 安全敏感型工业/IoT应用 |
+| STM32H563RGT6 | Cortex-M33 | LQFP-64 | 10×10 | 250MHz | 2MB/640KB | 1.71V~3.6V | 高性能, 中等IO | 工业控制、通信网关 |
 | STM32H503RBT6 | Cortex-M33 | LQFP-64 | 10×10 | 250MHz | 128KB/32KB | 1.62V~3.6V | 高性价比安全MCU | 成本敏感的安全应用 |
 | STM32H503CBU6 | Cortex-M33 | UFBGA-100 | 7×7 | 250MHz | 128KB/32KB | 1.62V~3.6V | 高性价比, BGA封装 | 紧凑型安全应用 |
+| STM32U575VGT6 | Cortex-M33 | UFBGA-100 | 7×7 | 160MHz | 2MB/786KB | 1.71V~3.6V | 超低功耗, TrustZone, 640KB SRAM+扩展 | 电池供电的超低功耗IoT |
+| STM32U575RGT6 | Cortex-M33 | LQFP-64 | 10×10 | 160MHz | 2MB/786KB | 1.71V~3.6V | 超低功耗, LQFP封装易于手工焊接 | 电池供电IoT、可穿戴 |
 | STM32F412RGT6 | Cortex-M4 FPU | LQFP-64 | 10×10 | 100MHz | 1MB/256KB | 1.7V~3.6V | 大Flash, 丰富通信接口 | 数据密集型中性能应用 |
-| STM32H750VBT6 | Cortex-M7 | LQFP-100 | 14×14 | 480MHz | 128KB/1MB | 1.62V~3.6V | 高性能, 内置ART加速器 | 高性能实时控制 |
+| STM32F411CEU6 | Cortex-M4 FPU | UFQFPN-48 | 7×7×0.55 | 100MHz | 512KB/128KB | 1.7V~3.6V | ART加速器, 低功耗, Batch Acquisition Mode | 高性能低功耗便携设备 |
+| STM32F401CCU6 | Cortex-M4 FPU | UFQFPN-48 | 7×7×0.55 | 84MHz | 256KB/64KB | 1.7V~3.6V | 性价比高, 丰富外设 | 通用中性能应用 |
 | STM32F103CBT6 | Cortex-M3 | LQFP-48 | 7×7 | 72MHz | 128KB/20KB | 2V~3.6V | 经典"蓝色药丸"MCU, 丰富外设, 成熟生态, USB2.0 FS | 通用控制、USB外设、入门级MCU应用 |
 | STM32G431CBU6 | Cortex-M4 FPU | UFQFPN-48 | 7×7×0.55 | 170MHz | 128KB/32KB | 1.71V~3.6V | 数学加速CORDIC+FMAC, 4×12bit ADC(4MSps), 3×OPAMP, 4×DAC, UCPD, USB FS | 电机控制、数字电源、高精度模拟 |
 | STM32G431CBT6 | Cortex-M4 FPU | LQFP-48 | 7×7 | 170MHz | 128KB/32KB | 1.71V~3.6V | 同G431CBU6, LQFP封装易手工焊接 | 电机控制、数字电源、通用控制 |
 | STM32G031G8U6 | Cortex-M0+ | UFQFPN-28 | 4×4×0.6 | 64MHz | 64KB/8KB | 1.7V~3.6V | 2×I2C, 2×SPI/I2S, 2×USART, 12bit ADC 2.5MSps, VBAT, 低功耗 | 低成本IoT、通用控制、电池供电设备 |
+| STM32G031F8P6 | Cortex-M0+ | LQFP-48 | 7×7 | 64MHz | 64KB/8KB | 1.7V~3.6V | 44 GPIO, 2×I2C, 2×SPI/I2S, 2×USART, 12bit ADC 2.5MSps, VBAT, 低功耗 | 低成本IoT、通用控制、更多IO需求场景 |
 
 ### 9.7 Rockchip RV系列
 
@@ -379,22 +394,28 @@
 | 型号 | 厂商 | 封装 | 封装尺寸 (mm) | 供电电压 | 关键参数 | 适用场景 |
 |---|---|---|---|---|---|---|
 | TPA3255DDVR | TI | HTSSOP-44 | 14×8.1 | 18V~53.5V | 315W立体声@4Ω/10%THD, Class-D, PurePath Ultra-HD, THD+N 0.006% | 高保真音响、家庭影院、有源音箱 |
-| TPA3116D2DADR | TI | HTSSOP-32 | 11×6.2 | 4.5V~26V | 50W立体声@4Ω, Class-D, 高效 | 中功率有源音箱、蓝牙音箱 |
-| TPA3138D2PWPR | TI | HTSSOP-28 | 9.7×4.4 | 4.5V~14.4V | 20W立体声@4Ω, Class-D, 超小封装 | 紧凑型有源音箱、便携音响 |
+| TPA3221DDVR | TI | HTSSOP-44 (DDV) | 14×8.1 | 7V~30V | Class D, 2×105W@4Ω BTL/1×208W@2Ω PBTL, 闭环反馈, 100kHz带宽, 0.02% THD+N@1W, 可选增益18/24/30/34dB | 高保真大功率音响、家庭影院、有源音箱 |
 | TAS5805MPWPR | TI | HTSSOP-28 | 9.7×4.4 | 4.5V~26V | 智能功放, I²C控制, 内置DSP, 闭环反馈 | 智能音箱、带DSP处理的音频系统 |
+| TPA3116D2DADR | TI | HTSSOP-32 | 11×6.2 | 4.5V~26V | 50W立体声@4Ω, Class-D, 高效 | 中功率有源音箱、蓝牙音箱 |
+| TPA3118D2DAPR | TI | HTSSOP-32 (DAP) | 11×6.2 | 4.5V~26V | Class D立体声, 30W@4Ω/15W@8Ω, 高效, 软静音 | 中功率有源音箱、蓝牙音箱 |
+| TPA3138D2PWPR | TI | HTSSOP-28 | 9.7×4.4 | 4.5V~14.4V | 20W立体声@4Ω, Class-D, 超小封装 | 紧凑型有源音箱、便携音响 |
+| PAM8610 | Diodes Inc | SOP-16/QFN-16 | 10.2×6.4 / 4×4 | 6V~14V | 2×3W@12V/8Ω, Class D立体声功放, 效率88%, 过载/热保护 | 车载音频、家庭影院、便携音箱 |
 | MAX98357AETE+ | Analog Devices(ADI) | TQFN-16 | 3×3×0.75 | 2.5V~5.5V | 数字PCM输入Class D功放, 3.2W@4Ω/5V, 效率92%, I2S/Left-Justified/TDM, 无需MCLK, 无滤波 | 智能音箱、笔记本、IoT设备、便携音响 |
+| PAM8403 | Diodes Inc | SOP-16/QFN-16 | 10.2×6.4 / 4×4 | 4.5V~5.5V | 2×2W@5V/8Ω, Class D立体声功放, 效率85%, 20Hz~20kHz | 蓝牙音箱、便携音频、USB音箱 |
+| AW3410S | Awinic(上海艾为) | SOP-8/QFN-20 | 5.3×6.2 / 4×4 | 2.7V~5.5V | Class D音频功放, THD+N<1%, SNR>85dB, 效率85~90%, 内置保护电路 | 便携音箱、蓝牙音箱、智能手机/平板音频 |
+| LM386 | TI(德州仪器) | DIP-8/SOIC-8 | 9.3×6.4 / 5.3×6.0 | 4V~18V | 700mW@9V/4Ω, Class-AB音频功放, 增益20~200倍可调, THD+N<0.2%, 静态8mA | 便携音频放大、小型扬声器、报警器 |
 
 ### 11.2 音频DAC/ADC/编解码器
 
 | 型号 | 厂商 | 封装 | 封装尺寸 (mm) | 供电电压 | 关键参数 | 适用场景 |
 |---|---|---|---|---|---|---|
-| ES8311 | Everest Semi(顺芯) | QFN-20 | 3×3 | 1.8V~3.3V | 24bit音频CODEC, ADC 100dB SNR/-93dB THD+N, DAC 110dB SNR/-80dB THD+N, 8~96kHz, I2S/PCM, 内置PLL, 14mW功耗 | 车载、IP Camera、DVR、便携音频 |
-| ES9023P | ESS Technology | SOP-16 | 9.9×3.9 | 3.3V~3.6V | 24bit立体声DAC, HyperStream架构, 112dB DNR, 2Vrms直驱输出, 无抖动, I2S | 蓝光播放器、CD/DVD播放器、机顶盒、音频接收器 |
-| ES9018 | ESS Technology | — | — | — | 32bit 8通道DAC, 超高指标 | 高端音频DAC(待补充详细封装参数) |
 | PCM5102APWR | TI | TSSOP-20 (PW) | 6.5×6.4 | 3.3V | 24bit立体声DAC, 112dB SNR, 32bit/384kHz PCM, 2.1Vrms输出, 集成PLL, 免MCLK | A/V接收器、BD/DVD播放器、汽车信息娱乐 |
 | PCM5100 | TI | TSSOP-20 | 6.5×6.4 | 3.3V | 24bit立体声DAC, 100dB SNR, 免隔直电容, 集成PLL | 数字电视、机顶盒、音频接收器 |
-| CS4344 | Cirrus Logic | TSSOP-10 | 3.1×3.1 | 3.3V/5V | 24bit立体声DAC, 105dB动态范围, -90dB THD+N, 自动检测采样率2k~192kHz, Popguard | DVD/BD播放器、数字电视、机顶盒、汽车音响 |
 | PCM1808PWR | TI | TSSOP-14 (PW) | 4.4×5 | 3.3V~5V | 24bit立体声ADC, 99dB SNR, -93dB THD+N, 8~96kHz, I2S输出 | 音频录制、数字混音、音频接口 |
+| ES9018 | ESS Technology | — | — | — | 32bit 8通道DAC, 超高指标 | 高端音频DAC(待补充详细封装参数) |
+| ES9023P | ESS Technology | SOP-16 | 9.9×3.9 | 3.3V~3.6V | 24bit立体声DAC, HyperStream架构, 112dB DNR, 2Vrms直驱输出, 无抖动, I2S | 蓝光播放器、CD/DVD播放器、机顶盒、音频接收器 |
+| ES8311 | Everest Semi(顺芯) | QFN-20 | 3×3 | 1.8V~3.3V | 24bit音频CODEC, ADC 100dB SNR/-93dB THD+N, DAC 110dB SNR/-80dB THD+N, 8~96kHz, I2S/PCM, 内置PLL, 14mW功耗 | 车载、IP Camera、DVR、便携音频 |
+| CS4344 | Cirrus Logic | TSSOP-10 | 3.1×3.1 | 3.3V/5V | 24bit立体声DAC, 105dB动态范围, -90dB THD+N, 2k~192kHz, Popguard | DVD/BD播放器、数字电视、机顶盒、汽车音响 |
 
 ### 11.3 音频处理器/语音芯片
 
@@ -405,10 +426,11 @@
 
 ### 11.4 音频放大器(新增)
 
+### 11.5 其他音频器件
+
 | 型号 | 厂商 | 封装 | 封装尺寸 (mm) | 供电电压 | 关键参数 | 适用场景 |
 |---|---|---|---|---|---|---|
-| TPA3221DDVR | TI | HTSSOP-44 (DDV) | 14×8.1 | 7V~30V | Class D, 2×105W@4Ω BTL/1×208W@2Ω PBTL, 闭环反馈, 100kHz带宽, 0.02% THD+N@1W, 可选增益18/24/30/34dB | 高保真大功率音响、家庭影院、有源音箱 |
-| TPA3118D2DAPR | TI | HTSSOP-32 (DAP) | 11×6.2 | 4.5V~26V | Class D立体声, 30W@4Ω/15W@8Ω, 高效, 软静音 | 中功率有源音箱、蓝牙音箱 |
+| MAX9814 | Maxim(ADI) | TQFN-32 | 5×5 | 2.7V~5.5V | 麦克风前置放大器, 集成AGC, I²S数字输出, 8~48kHz采样率, 16bit ADC | 语音识别、智能音箱、录音笔 |
 
 ---
 
@@ -465,6 +487,12 @@
 | 型号 | 厂商 | 封装 | 封装尺寸 (mm) | 供电电压 | 关键参数 | 适用场景 |
 |---|---|---|---|---|---|---|
 | HUSB238 | — | DFN-10L | 3×3 | 3V~25V | USB PD3.0 Sink控制器, 支持Type-C, 最高100W, 支持Apple Divider/BC1.2, I²C接口 | PD受电设备、无线充电器、IoT设备、无人机 |
+
+### 13.5 信号发生器/DDS
+
+| 型号 | 厂商 | 封装 | 封装尺寸 (mm) | 供电电压 | 关键参数 | 适用场景 |
+|---|---|---|---|---|---|---|
+| AD9833 | ADI(亚德诺) | MSOP-10 | 3×3 | 2.3V~5.5V | 可编程波形发生器(DDS), 28bit频率寄存器, 正弦/三角/方波输出, SPI接口, 25MHz主频 | 函数发生器、RF调制、音频合成、测试仪表 |
 
 ---
 
