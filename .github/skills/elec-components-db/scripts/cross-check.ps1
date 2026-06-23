@@ -33,15 +33,15 @@ $missing = @()
 foreach ($item in $unique) {
     # 跳过非型号文本
     if ($item -notmatch "^[a-zA-Z0-9]") { continue }
-    
+
     $found = $db -match [regex]::Escape($item)
-    
+
     # 尝试部分匹配（处理后缀差异）
     if (-not $found) {
         $base = $item -replace '(_ck|tqfn|r)$',''
         $found = $db -match [regex]::Escape($base)
     }
-    
+
     if (-not $found) {
         $missing += $item
     }
